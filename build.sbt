@@ -10,10 +10,13 @@ resolvers += Resolver.sonatypeRepo("releases")
 
 // grading libraries
 libraryDependencies += "junit" % "junit" % "4.10" % Test
+
 libraryDependencies ++= Seq(
-  "org.apache.spark" %% "spark-core" % "2.1.0",
-  "org.apache.spark" %% "spark-sql" % "2.1.0"
+  "org.apache.spark" %% "spark-core" % "1.2.0" % "compile",
+  "org.apache.spark" %% "spark-streaming" % "1.2.0" % "compile",
+  "org.apache.spark" % "spark-streaming-twitter_2.10" % "1.2.0"
 )
+
 
 // include the common dir
 commonSourcePackages += "common"
