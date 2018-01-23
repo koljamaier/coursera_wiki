@@ -3,7 +3,7 @@ package wikipedia
 import java.io.File
 
 object WikipediaData {
-
+  // private[wikipedia] is used for package-scope method access
   private[wikipedia] def filePath = {
     val resource = this.getClass.getClassLoader.getResource("wikipedia/wikipedia.dat")
     if (resource == null) sys.error("Please download the dataset as explained in the assignment instructions")
