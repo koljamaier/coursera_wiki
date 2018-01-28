@@ -73,6 +73,8 @@ object WikipediaRanking {
     // Concatenate lists via ++ Operator
     single_rdd.reduceByKey(_ ++ _)
 
+    // use this for Iterable
+    //single_rdd.groupByKey()
   }
 
 
