@@ -38,7 +38,6 @@ object WikipediaRanking {
   def occurrencesOfLang(lang: String, rdd: RDD[WikipediaArticle]): Int = rdd.aggregate(0)(
     (acc, article) => acc + article.mentionsLanguage(lang),
     (acc, article) => acc + article
-    (acc, article) => 1+5
   )
 
 
